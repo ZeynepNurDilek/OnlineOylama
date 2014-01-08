@@ -11,6 +11,7 @@
 
         Görevli id ve şifre girilecek 
         Bilgisayarın oy bilgisayarı mı yoksa görevli bilgisayarı mı olduğu ayarlanacak
+        buna göre sayfa yönlendirilecek
         
         <h:form>  
                               
@@ -27,7 +28,7 @@
                         <f:selectItem itemLabel="Görevli" itemValue="2" />  
                 </p:selectOneRadio>  
                 
-                <p:commandButton value="Giris Yap" action = "#{data.adresal()}" update="display" />  
+                <p:commandButton value="Giris Yap" action = "#{data.yonlendir()}" update="display" />  
             
           </h:panelGrid>  
             
@@ -37,7 +38,7 @@
                     <h:outputText value="gorevli id = " />  
                     <h:outputText value="#{data.gorevli_id}" /> 
                     <h:outputText value="adres id = " />  
-                    <h:outputText value="#{data.adres}" /> 
+                    <h:outputText value="#{data.bilg_adres}" /> 
             
                 </h:panelGrid>  
             </p:panel>  
