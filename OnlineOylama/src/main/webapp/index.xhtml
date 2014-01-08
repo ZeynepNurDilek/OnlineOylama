@@ -16,8 +16,8 @@
             <h:panelGrid columns="4" cellpadding="5">  
                 <h:outputLabel for="tc" value="Görevli No:" style="font-weight:bold"/>  
           
-                <p:inputText id="gorevli_id" value="#{gorevli_id}" />  
-                <p:inputText id="sifre" value="#{sifre}" />  
+                <p:inputText id="gorevli_id" value="#{data.gorevli_id}" />  
+                <p:inputText id="sifre" value="#{data.sifre}" />  
           
                 <p:commandButton value="Giris Yap" onclick = "#{data.sorgula()}" update="display" />  
             
@@ -27,9 +27,9 @@
             <p:panel id="display" header="Oturum Bilgisi" style="margin-top:10px;">  
                  <h:panelGrid columns="2">  
                     <h:outputText value="gorevli id = " />  
-                    <h:outputText value="#{gorevli_id}" /> 
+                    <h:outputText value="#{data.gorevli_id}" /> 
                     <h:outputText value="adres id = " />  
-                    <h:outputText value="#{data.sorgula}" /> 
+                    <h:outputText value="#{data.adres}" /> 
             
                 </h:panelGrid>  
             </p:panel>  
