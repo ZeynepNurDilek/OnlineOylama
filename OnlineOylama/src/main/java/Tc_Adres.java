@@ -2,9 +2,8 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  * 
- * kullanıcı oy bilgisayarına geçip istediği partiyi seçip iki kez onay alındıktan sonra çalıştırılacak 
- * parti id yi ve görevli id yi alıp o görevli için o anda dbde bulunan adres bilgilerini oy tablosuna ekleyecek 
  * 
+ * bu servlet görevlinin girdiği tc noyu alıp dbden sorgu yaparak adresi döndürecek
  * 
  * 
  */
@@ -12,6 +11,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,7 +20,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author zeynep
  */
-public class OyEkle extends HttpServlet {
+@WebServlet(urlPatterns = {"/Tc_Adres"})
+public class Tc_Adres extends HttpServlet {
 
     /**
      * Processes requests for both HTTP
@@ -41,10 +42,10 @@ public class OyEkle extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet OyEkle</title>");            
+            out.println("<title>Servlet Tc_Adres</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet OyEkle at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet Tc_Adres at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         } finally {            
