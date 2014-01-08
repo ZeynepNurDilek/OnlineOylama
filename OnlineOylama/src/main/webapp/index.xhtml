@@ -14,14 +14,25 @@
         <h:form>  
                               
             <h:panelGrid columns="4" cellpadding="5">  
-                <h:outputLabel for="tc" value="TC Kimlik No:" style="font-weight:bold"/>  
+                <h:outputLabel for="tc" value="Görevli No:" style="font-weight:bold"/>  
           
-                <p:inputText id="tckimlik" value="#{Data.tc}" />  
+                <p:inputText id="gorevli_id" value="#{gorevli_id}" />  
+                <p:inputText id="sifre" value="#{sifre}" />  
           
-                <p:commandButton value="Submit" actionListener="#{Data.sorgula()}"  update="display" />  
+                <p:commandButton value="Giris Yap" onclick = "#{data.sorgula()}" update="display" />  
             
-                <h:outputText value="#{Data.tc}" id="display" />  
           </h:panelGrid>  
+            
+            
+            <p:panel id="display" header="Oturum Bilgisi" style="margin-top:10px;">  
+                 <h:panelGrid columns="2">  
+                    <h:outputText value="gorevli id = " />  
+                    <h:outputText value="#{gorevli_id}" /> 
+                    <h:outputText value="adres id = " />  
+                    <h:outputText value="#{data.sorgula}" /> 
+            
+                </h:panelGrid>  
+            </p:panel>  
       
         </h:form>  
         
