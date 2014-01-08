@@ -18,12 +18,16 @@ public class Data {
     private int gorevli_id;
     private String sifre;
     
-    public int sorgula (){
     
-        setAdres(1234);
-        return getAdres();
+    public void adresal(){
+    if(gorevli_id == 123)
+        adres  = 123;
+    else 
+        adres = 234;
     }
-
+    
+    
+   
     /**
      * @return the tc
      */
