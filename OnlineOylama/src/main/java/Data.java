@@ -17,13 +17,19 @@ public class Data {
     private int adres;
     private int gorevli_id;
     private String sifre;
+    private int ekransecimi;
     
     
-    public void adresal(){
-    if(gorevli_id == 123)
-        adres  = 123;
-    else 
-        adres = 234;
+    public String adresal(){
+    if(ekransecimi == 1){
+       adres  = 123;
+       return "oyVer";
+    }
+    else if(ekransecimi == 2){ 
+       adres = 234;
+       return "gorevli";
+    }
+    else return "index";
     }
     
     
@@ -82,6 +88,20 @@ public class Data {
      */
     public void setSifre(String sifre) {
         this.sifre = sifre;
+    }
+
+    /**
+     * @return the ekransecimi
+     */
+    public int getEkransecimi() {
+        return ekransecimi;
+    }
+
+    /**
+     * @param ekransecimi the ekransecimi to set
+     */
+    public void setEkransecimi(int ekransecimi) {
+        this.ekransecimi = ekransecimi;
     }
     
     

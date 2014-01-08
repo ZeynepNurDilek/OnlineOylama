@@ -2,7 +2,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui">
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Facelet Title</title>
     </h:head>
@@ -13,12 +14,19 @@
         
         <h:form>  
                               
-            <h:panelGrid columns="4" cellpadding="5">  
+            <h:panelGrid columns="3" cellpadding="5">  
                 <h:outputLabel for="tc" value="Görevli No:" style="font-weight:bold"/>  
           
                 <p:inputText id="gorevli_id" value="#{data.gorevli_id}" />  
                 <p:inputText id="sifre" value="#{data.sifre}" />  
-          
+                
+                <h:outputText value="Bilgisayar: " /> 
+                
+                <p:selectOneRadio id="options" value="#{data.ekransecimi}">  
+                        <f:selectItem itemLabel="Oylama" itemValue="1" />  
+                        <f:selectItem itemLabel="Görevli" itemValue="2" />  
+                </p:selectOneRadio>  
+                
                 <p:commandButton value="Giris Yap" action = "#{data.adresal()}" update="display" />  
             
           </h:panelGrid>  
